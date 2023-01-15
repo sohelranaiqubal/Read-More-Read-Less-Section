@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ================ Read More Read Less Section CSS Starts ================ */
+#readml{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+  }
+  .card{
+    display: inline-flex;
+    width: 200px;
+    margin: 0 20px;
+    background: #fff;
+    border: 2px solid salmon;
+    border-radius: 15px;
+    padding: 25px 20px;
+    flex-direction: column;
+  
+    
+  }
+  .card_title{
+     font-weight: 500;
+     font-size: 24px;
+     color: #111;
+     margin-bottom: 25px;
+  }
+  .card_text{
+    font-weight: normal;
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 25px;
+    overflow: hidden;
+    max-height: 125px;
+  }
+  
+  .card_btn{
+    display: inline-flex;
+    background: #fff;
+    border: 1px solid salmon;
+    border-radius: 22.5px;
+    height: 45px;
+    padding: 0 22px;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 14px;
+    color: salmon;
+    text-decoration: none;
+    transition: .3s;
+  }
+  .card_btn:hover{
+    background: salmon ;
+    color: #fff;
+  }
+  
+  .card_btn::after{
+    content: 'Read More';
+  
+  }
+  
+  
+  .card.is-active .card_text{
+    max-height: none;
+  }
+  .card.is-active .card_btn::after{
+    content: 'Read Less';
+  }
+  .card.is-active .card_btn{
+    background: salmon ;
+    color: #fff;
+  }
+  /* ================ Read More Read Less Section CSS Ends ================ */
+  
